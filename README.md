@@ -1,29 +1,24 @@
-# template-vite-vue-tailwind-v3
+# Prueba tecnica vue.js
 
-- **template of:** vite + vue
-- **tailwindcss:** v3.x
+Maquetacion en Vue.js, Tailwind CSS, Chart.js
 
-## Started
+
+
+## Autor
+
+- [@Jamel Pimienta]
+
+## Pagina online
+
+Version online desplegada en **Netlify**,  [Click aqui](https://vue-graficos.netlify.app/)
+
+> https://vue-graficos.netlify.app/
+
+vue-graficos.netlify.app
+## Running Tests
+
+Para visualizar la pagina desde consola utilice el siguiente comando
+
 ```bash
-yarn
-# or `npm install`
+  npm run dev
 ```
-
----
-## Develop
-```bash
-yarn dev
-# or `npm run dev`
-```
-
----
-## Build
-```bash
-yarn build
-# or `npm run build`
-```
-
----
-<p align="center">
-<img src="./powered-by-vitawind-bright.png">
-</p>
