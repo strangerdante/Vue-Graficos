@@ -7,6 +7,7 @@ import Slider from "./components/Slider.vue";
 import Navbar from "./components/Navbar.vue";
 import Breadcrumb from "./components/Breadcrumb.vue";
 import GraficosTickets from "./components/GraficosTickets.vue";
+import GraficoBarra from "./components/GraficoBarra.vue";
 </script>
 
 <template>
@@ -41,12 +42,12 @@ import GraficosTickets from "./components/GraficosTickets.vue";
       <GraficoDona />
     </div>
     <div
-      class="flex h-52 justify-center rounded-lg bg-gradient-to-r from-teal-400 to-teal-700 sm:col-span-2 sm:col-start-3 sm:row-start-1"
+      class="flex h-[300px] justify-center rounded-lg bg-gradient-to-r from-teal-400 to-teal-700 sm:col-span-2 sm:col-start-3 sm:row-start-1"
     >
       <GraficoBarra />
     </div>
     <div
-      class="h-36 rounded-lg sm:col-span-2 sm:col-start-3 sm:row-span-3 sm:row-start-2"
+      class="h-[450px] rounded-lg sm:col-span-2 sm:col-start-3 sm:row-span-3 sm:row-start-2"
     >
       <h1 class="mb-2 text-xl font-semibold text-white">Galerías de eventos</h1>
       <Slider class="mb-4" />

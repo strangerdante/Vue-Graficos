@@ -1,64 +1,77 @@
 <template>
-  <Bar :data="data" :options="options" />
+  <div class="h-auto w-full rounded-lg p-4">
+    <div class="mb-4 flex items-center justify-between">
+      <div>
+        <h2 class="text-2xl font-bold text-white">Sales Comparison</h2>
+        <p class="text-emerald-100">Than last day</p>
+      </div>
+      <div class="text-5xl font-bold text-white">94%</div>
+    </div>
+    <div class="h-[200px] w-auto">
+      <canvas ref="chartCanvas"></canvas>
+    </div>
+  </div>
 </template>
 
-<script lang="ts">
-import {
-  Chart as ChartJS,
-  Title,
-  Tooltip,
-  Legend,
-  BarElement,
-  CategoryScale,
-  LinearScale,
-} from "chart.js";
-import { Bar } from "vue-chartjs";
-
-ChartJS.register(
-  CategoryScale,
-  LinearScale,
-  BarElement,
-  Title,
-  Tooltip,
-  Legend
-);
+<script>
+import { ref, onMounted } from "vue";
+import Chart from "chart.js/auto";
 
 export default {
-  name: "GraficoBarra",
-  components: {
-    Bar,
-  },
-  data() {
-    return {
-      data: {
-        labels: ["L", "M", "M", "J", "V", "S", "D"],
-        datasets: [
-          {
-            label: "Barras 1",
-            data: [40, 20, 12, 10, 20, 40, 50],
-            backgroundColor: ["#ffffff"],
-          },
-          {
-            label: "Barras 2",
-            data: [30, 10, 25, 15, 35, 20, 45],
-            backgroundColor: ["#13b497"],
-          },
-        ],
-      },
-      options: {
-        responsive: true,
-        plugins: {
-          legend: {
-            position: "right",
-            align: "center",
-            labels: {
-              usePointStyle: true,
-              pointStyle: "rect",
-              color: "white",
+  name: "SalesComparisonChart",
+  setup() {
+    const chartCanvas = ref(null);
+
+    onMounted(() => {
+      const ctx = chartCanvas.value.getContext("2d");
+      new Chart(ctx, {
+        type: "bar",
+        data: {
+          labels: ["06", "07", "08", "09", "10", "11", "12", "13", "14", "15"],
+          datasets: [
+            {
+              data: [30, 70, 30, 40, 90, 60, 30, 70, 50, 90],
+              backgroundColor: "white",
+              barThickness: 8,
+            },
+            {
+              data: [20, 40, 20, 30, 70, 50, 20, 50, 30, 80],
+              backgroundColor: "rgba(255, 255, 255, 0.5)",
+              barThickness: 8,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          scales: {
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: {
+                color: "white",
+              },
+            },
+            y: {
+              display: false,
             },
           },
+          plugins: {
+            legend: {
+              display: false,
+            },
+            datalabels: {
+              display: false,
+            },
+          },
+          barPercentage: 0.8,
+          categoryPercentage: 0.9,
         },
-      },
+      });
+    });
+
+    return {
+      chartCanvas,
     };
   },
 };
