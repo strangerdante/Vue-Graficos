@@ -2,8 +2,8 @@
   <div class="h-auto w-full rounded-lg p-4">
     <div class="mb-4 flex items-center justify-between">
       <div>
-        <h2 class="text-2xl font-bold text-white">Sales Comparison</h2>
-        <p class="text-emerald-100">Than last day</p>
+        <h2 class="text-2xl font-bold text-white">Comparación de ventas</h2>
+        <p class="text-emerald-100">Último día</p>
       </div>
       <div class="text-5xl font-bold text-white">94%</div>
     </div>
