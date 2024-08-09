@@ -3,7 +3,7 @@
     <div class="flex-col">
       <div class="flex">
         <p class="font-bold text-white">456k Pcs</p>
-        <p class="ml-auto text-gray-400">Daily</p>
+        <p class="ml-auto text-gray-400">Diario</p>
         <!-- Icono flecha abajo -->
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +19,7 @@
         </svg>
       </div>
 
-      <p class="text-gray-500">Ticket Sold</p>
+      <p class="text-gray-500">Ticket Vendido</p>
     </div>
 
     <div class="mt-3 h-2.5 w-full rounded-full bg-gray-200 dark:bg-gray-500">
