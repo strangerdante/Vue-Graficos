@@ -4,7 +4,13 @@
       <h2 class="text-lg font-bold text-white">Mejores ventas</h2>
       <select
         v-model="selectedDay"
-        class="mt-2 w-full rounded-xl bg-gray-800 p-4 text-sm text-white"
+        class="mt-2 w-full appearance-none rounded-xl bg-gray-800 py-4 pl-4 pr-12 text-sm text-white"
+        style="
+          background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE0IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNyA3TDEzIDEiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+');
+          background-repeat: no-repeat;
+          background-position: right 1rem center;
+          background-size: 10px 8px;
+        "
       >
         <option v-for="day in weekDays" :key="day" :value="day">
           {{ day }} - {{ dailySales[day].total }} pcs

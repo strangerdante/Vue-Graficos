@@ -6,11 +6,21 @@
         <div class="ml-auto flex items-center">
           <select
             v-model="selectedPeriod"
-            class="mr-2 bg-transparent text-gray-400"
+            class="mr-2 appearance-none rounded-xl bg-gray-800 py-2 pl-2 pr-8 text-sm text-white"
+            style="
+              background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTQiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDE0IDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNyA3TDEzIDEiIHN0cm9rZT0iI2ZmZmZmZiIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KPC9zdmc+');
+              background-repeat: no-repeat;
+              background-position: right 0.5rem center;
+              background-size: 10px 8px;
+            "
           >
-            <option value="daily">Diario</option>
-            <option value="weekly">Semanal</option>
-            <option value="monthly">Mensual</option>
+            <option value="daily" class="bg-gray-800 text-white">Diario</option>
+            <option value="weekly" class="bg-gray-800 text-white">
+              Semanal
+            </option>
+            <option value="monthly" class="bg-gray-800 text-white">
+              Mensual
+            </option>
           </select>
         </div>
       </div>
