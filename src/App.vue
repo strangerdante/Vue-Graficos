@@ -47,10 +47,12 @@ import GraficoBarra from "./components/GraficoBarra.vue";
       <GraficoBarra />
     </div>
     <div
-      class="h-[450px] rounded-lg sm:col-span-2 sm:col-start-3 sm:row-span-3 sm:row-start-2"
+      class="h-[220px] rounded-lg bg-gray-700 sm:col-span-2 sm:col-start-3 sm:row-span-3 sm:row-start-2 sm:h-[420px]"
     >
-      <h1 class="mb-2 text-xl font-semibold text-white">Galerías de eventos</h1>
-      <Slider class="mb-4" />
+      <h1 class="mb-2 px-4 pt-4 text-xl font-semibold text-white">
+        Galerías de eventos
+      </h1>
+      <Slider />
     </div>
   </div>
 </template>
